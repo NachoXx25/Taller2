@@ -1,0 +1,10 @@
+# ninja log v5
+1	1946	7084985964916871	CMakeFiles/untitled4.dir/main.cpp.obj	5d08e1b526cd6e4d
+1950	2239	7084985967742065	untitled4.exe	caf62f388a8a46e5
+80	237	7084989968300277	CMakeFiles/untitled4.dir/Enemigo.cpp.obj	2b53628347d11122
+64	240	7084989968300277	CMakeFiles/untitled4.dir/JosephAlcalino.cpp.obj	8e204f581ceeda75
+96	1052	7084989976480052	CMakeFiles/untitled4.dir/Sala.cpp.obj	c0d87771dbb4f2fa
+5	1193	7084989977918732	CMakeFiles/untitled4.dir/main.cpp.obj	5d08e1b526cd6e4d
+33	1971	7084989985649034	CMakeFiles/untitled4.dir/MusiPRO.cpp.obj	3cdc9caa30342f98
+50	1985	7084989985798178	CMakeFiles/untitled4.dir/Mazmorra.cpp.obj	feff272f137f183a
+1986	2378	7084989989656824	untitled4.exe	921042eda83aff04

@@ -1,0 +1,81 @@
+@startuml
+
+class JosephAlcalino{
+-nivel: int
++JosephAlcalino(salud: float,armadura: float,ataque: float,nivel: int)
++getNivel():int
++setNivel(nivel: int):void
+}
+
+class Enemigo{
++Enemigo(salud: float, armadura: float, ataque: float)
+}
+
+class Personaje{
+-salud: float
+-armadura: float
+-ataque: float
++Personaje()
++Personaje(salud: float, armadura: float, ataque: float)
++~Personaje()
++getSalud(): float
++getArmadura(): float
++getAtaque(): float
++setSalud(salud: float): void
++setArmadura(armadura: float): void
++setAtaque(ataque: float): void
+}
+
+class Sala{
+-tipo: string
+-estado: bool
+-nivel: int
+-numeroSala: int
+-cantEnemigo: int
+-hijoIzquierdo: Sala*
+-hijoDerecho: Sala*
++Sala()
++Sala(tipo: string)
++~Sala()
++getTipo(): string
++setTipo(tipo:string): void
++getEstado(): bool
++setEstado(estado: bool): void
++getCantEnemigo(): int
++setCantEnemigo(cantEnemigo: int): void
++getNivel(): int
++setNivel(nivel: int); void
++getNumeroSala(): int
++setNumeroSala(numeroSala: int): void
++getHijoIzquierdo(): Sala*
++setHijoIzquierdo(sala: Sala*): void
++getHijoDerecho(): Sala*
++setHijoDerecho(sala: Sala*): void
+}
+
+class Mazmorra{
+-raiz: Sala*
++Mazmorra()
++~Mazmorra()
++agregarDato(dato: int): void
++agregarRecursivo(sala: Sala*, dato: int): Sala
++eliminarRecursivo(sala: Sala*, dato: int): Sala
++eliminar(dato: int): void
++recorrerRecursivo(sala: Sala*): void
+}
+
+class MusiPro{
++mazmorra: Mazmorra
++MusiPro()
++menu()
+}
+
+JosephAlcalino --|> Personaje
+Enemigo --|> Personaje
+Mazmorra "1" --> "0..* "Enemigo : contiene
+Mazmorra "1" <-- "0..*" Sala : contiene
+JosephAlcalino "1" --> "1..*" Mazmorra : explora
+Enemigo "0..*" --> "1" JosephAlcalino : combate
+MusiPro "1" --> "1" Mazmorra : utiliza
+
+@enduml
